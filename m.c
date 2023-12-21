@@ -95,29 +95,29 @@ void PrintMyMallocFreeList() {
 
 int main(int argc, char *argv[])
 {
-	char *array1;
-	char *array2;
-	int i;
+  char *array1;
+  char *array2;
+  int i;
 
-	InitMallocator();
+  InitMallocator();
 
-	array1 = Mallocator(128);
-	if(array1 == NULL)
-	{
-		fprintf(stderr,"call to MyMalloc() failed\n");
-		fflush(stderr);
-		exit(1);
-	}
+  array1 = Mallocator(128);
+  if(array1 == NULL)
+  {
+    fprintf(stderr,"call to Mallocator() failed\n");
+    fflush(stderr);
+    exit(1);
+  }
 
-	array2 = Mallocator(32);
-	if(array2 == NULL)
-	{
-		fprintf(stderr,"call to MyMalloc() failed\n");
-		fflush(stderr);
-		exit(1);
-	}
+  array2 = Mallocator(32);
+  if(array2 == NULL)
+  {
+    fprintf(stderr,"call to Mallocator() failed\n");
+    fflush(stderr);
+    exit(1);
+  }
 
   PrintMyMallocFreeList();
 
-	return(0);
+  return(0);
 }
